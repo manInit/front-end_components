@@ -1,0 +1,9 @@
+.accordion__title {
+	cursor: pointer;
+	border: 1px solid black;
+}
+.accordion__body {
+	overflow: hidden;
+	transition: all 0.5s ease-in;
+	height: 0px;
+}

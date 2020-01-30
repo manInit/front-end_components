@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/slider/css/index.css">
+	<link rel="stylesheet" href="lib/accordion/css/index.css">
+	<style>
+		.accordion_active {
+			height: 200px;
+		}
+		#one {
+			width: 500px;
+		}
+		#slider {
+			width: 400px;
+			height: 200px;
+			margin-left: 20px;
+		}
+		img {
+			width: 100%;
+		}
+		body {
+			display: flex;
+			justify-content: space-around;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h2>Accordion</h2>
+		<div class="accordion" id="one">
+			<div class="accordion__title">
+				Title
+			</div>
+			<div class="accordion__body">
+				<img src="img/1.gif" alt="">
+			</div>
+		</div>
+	</div>
+	<div>
+		<h2>Slider</h2>
+		<div class="slider" id="slider">
+			<div class="slider__wrap">
+				<div class="slider__slide slider__slide_1" style="right: 0px">
+					<img src="img/1.gif" alt="">
+				</div>
+				<div class="slider__slide slider__slide_2" style="right: 0px">
+					<img src="img/2.gif" alt="">
+				</div>
+				<div class="slider__slide slider__slide_3" style="right: 0px">
+					<img src="img/tenor.gif" alt="">
+				</div>
+			</div>
+			<div class="slider__btn slider__btn_right">&gt;</div>
+			<div class="slider__btn slider__btn_left">&lt;</div>
+		</div>
+	</div>
+
+	
+
+	<script src="lib/accordion/index.js"></script>
+	<script src="lib/slider/index.js"></script>
+
+	<script>
+		let slider = new Slider('slider', 0, 400);
+		let accordion = new Accordion('one', 'accordion_active');
+	</script>
+</body>
+</html>
